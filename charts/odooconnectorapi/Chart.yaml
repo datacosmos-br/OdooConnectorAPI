@@ -1,0 +1,4 @@
+apiVersion: v2
+name: odooconnectorapi
+description: A Helm chart for Kubernetes to deploy OdooConnectorAPI
+version: 0.1.0

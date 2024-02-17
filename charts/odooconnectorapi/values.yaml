@@ -1,0 +1,20 @@
+# values.yaml
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: <your_image>
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  ODOO_URL: "localhost"
+  ODOO_DB: "mydb"
+  ODOO_USERNAME: "admin"
+  ODOO_PASSWORD: "admin"
+
+replicaCount: 1

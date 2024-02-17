@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "chart.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            - name: ODOO_URL
+              value: {{ .Values.env.ODOO_URL }}
+            - name: ODOO_DB
+              value: {{ .Values.env.ODOO_DB }}
+            - name: ODOO_USERNAME
+              value: {{ .Values.env.ODOO_USERNAME }}
+            - name: ODOO_PASSWORD
+              value: {{ .Values.env.ODOO_PASSWORD }}
+          ports:
+            - containerPort: 8000
