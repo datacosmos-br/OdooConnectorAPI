@@ -1,5 +1,6 @@
 fastapi
-uvicorn
+flake8
 odoorpc
-python-dotenv
 pylint
+python-dotenv
+uvicorn
