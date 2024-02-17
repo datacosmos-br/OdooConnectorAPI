@@ -22,8 +22,12 @@ async def root():
 @app.get("/get/partners")
 async def get_partners() -> Dict[str, Any]:
     """GET endpoint to fetch partners from Odoo."""
-    odoo = odoorpc.ODOO(ODOO_URL, port=80)
-    odoo.login(ODOO_DB, ODOO_USERNAME, ODOO_PASSWORD)
+    try:
+        odoo = odoorpc.ODOO(ODOO_URL, port=80)
+        odoo.login(ODOO_DB, ODOO_USERNAME, ODOO_PASSWORD)
+    except odoorpc.error.RPCError as err:
+        return {"error": err}
+
     partner = None
     partners = []  # Initialize the partners variable with an empty list
     if odoo.env:

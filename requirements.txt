@@ -3,4 +3,5 @@ flake8
 odoorpc
 pylint
 python-dotenv
+tox
 uvicorn

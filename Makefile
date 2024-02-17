@@ -46,3 +46,34 @@ help:
 	@echo "  lint     Run Python linting with Pylint"
 	@echo "  flake8   Run Flake8 for style guide enforcement"
 	@echo "  test     Execute tests"
+
+# Create a Python distribution package
+dist:
+	@$(PYTHON_CMD) setup.py sdist
+
+# Install dependencies from requirements.txt
+install:
+	@pip install -r requirements.txt
+
+# Run Tox to test the project in multiple Python environments
+tox:
+	@tox
+
+# Run coverage to measure code coverage
+coverage:
+	@coverage run --source $(APP_DIR) $(ODOO_DIR)
+	@coverage report
+
+# Run pylint with coverage
+pylint-coverage:
+	@pylint --rcfile=.pylintrc --output-format=colorized $(APP_DIR)/*.py $(ODOO_DIR)/*.py
+	@coverage report
+
+# Run flake8 with coverage
+flake8-coverage:
+	@flake8 --format=colorized $(APP_DIR)/*.py $(ODOO_DIR)/*.py
+	@coverage report
+
+# Run case tests
+case-tests:
+	@$(PYTHON_CMD) $(ODOO_DIR)/test_odoo_connection.py -c "import unittest; unittest.main()"
