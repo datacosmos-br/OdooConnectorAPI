@@ -1,0 +1,21 @@
+app/main.py
+  s_6b281e75214429::t_1e095aace446bf 2,6
+app/controllers.py
+  s_6b281e75214429::t_9c32f352af078d 179
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "d012dff2634cca8f4ed094aa236972ca102fe6b4",
+  "prompts": {},
+  "sessions": {
+    "s_6b281e75214429": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3b7576ce-20fb-4ef1-acac-3d2e0fc6e6ae",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Zed <hi@zed.dev>"
+    }
+  }
+}
