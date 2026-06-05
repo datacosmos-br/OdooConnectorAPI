@@ -1,7 +1,11 @@
 fastapi
 flake8
 odoorpc
+pydantic
 pylint
+pypeg2
 python-dotenv
+requests
+tabulate
 tox
 uvicorn

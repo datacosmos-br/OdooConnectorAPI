@@ -13,7 +13,7 @@ service:
 
 env:
   ODOO_URL: "localhost"
-  ODOO_DB: "mydb"
+  ODOO_DB: "odoodb"
   ODOO_USERNAME: "admin"
   ODOO_PASSWORD: "admin"
 

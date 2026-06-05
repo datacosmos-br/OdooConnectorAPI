@@ -1,12 +1,45 @@
-version: '3.8'
+# docker-compose.yml
+version: '3.7'  # Atualizado para a versão 3.7 para mais recursos do Compose
+
 services:
-  web:
-    build: .
-    command: uvicorn app.main:app --host 0.0.0.0 --reload
+  odooconnectorapi:
+    build: .  # Assumindo que você tem um Dockerfile na raiz do projeto
     ports:
-      - "8000:8000"
+      - "8000:8000"  # Porta padrão do FastAPI
+    depends_on:
+      - web  # Dependência do serviço Odoo
     environment:
-      ODOO_URL: ${ODOO_URL}
-      ODOO_DB: ${ODOO_DB}
-      ODOO_USERNAME: ${ODOO_USERNAME}
-      ODOO_PASSWORD: ${ODOO_PASSWORD}
+      ODOO_URL: "${ODOO_HOST}"
+      ODOO_PORT: "${ODOO_PORT}"
+      ODOO_DB: "${ODOO_DB}"
+      ODOO_USERNAME: "${ODOO_USERNAME}"
+      ODOO_PASSWORD: "${ODOO_PASSWORD}"
+    networks:
+      - mynetwork
+
+  web:
+    image: odoo:17
+    command: ["odoo", "-d", "${ODOO_DB}", "-i", "base", "--without-demo=all"]
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    environment:
+      HOST: "db"
+      USER: "${POSTGRES_USER}"
+      PASSWORD: "${POSTGRES_USER}"
+    networks:
+      - mynetwork
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: "${ODOO_DB}"
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_USER}"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
