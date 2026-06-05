@@ -1,0 +1,25 @@
+app/utils.py
+  ai_agent 1-29
+app/dynamic_models.py
+  ai_agent 1-50
+tests/test_odoo_connection.py
+  ai_agent 1-16
+app/exceptions.py
+  ai_agent 1-6
+app/controllers.py
+  ai_agent 1-341
+app/parser.py
+  ai_agent 1-147
+app/odoo_utils.py
+  ai_agent 1-36
+app/serializers.py
+  ai_agent 1-156
+tests/cli.py
+  ai_agent 1-151
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "e4c6f1f95876457e940c55d5968993e16f7ec4ef",
+  "prompts": {}
+}
