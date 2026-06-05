@@ -176,7 +176,7 @@ async def post_model_data(model: str,
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e)) from e
 
-@router.put("/api/{model}/{   }/")
+@router.put("/api/{model}/{rec_id}/")
 async def put_model_record(model: str,
                            rec_id: int,
                            data: Dict[str, Any],
