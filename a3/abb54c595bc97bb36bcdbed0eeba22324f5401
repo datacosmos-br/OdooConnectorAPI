@@ -1,0 +1,19 @@
+Makefile.dc
+  s_6b281e75214429::t_68ffc0510031dc 1-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "a3abb54c595bc97bb36bcdbed0eeba22324f5401",
+  "prompts": {},
+  "sessions": {
+    "s_6b281e75214429": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3b7576ce-20fb-4ef1-acac-3d2e0fc6e6ae",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Zed <hi@zed.dev>"
+    }
+  }
+}
