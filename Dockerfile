@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt .
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --root-user-action=ignore -r requirements.txt
 
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
@@ -16,8 +16,8 @@ COPY . .
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Define environment variable
-ENV NAME OdooConnectorAPI
+# Define environment variable (key=value form; legacy space form is deprecated)
+ENV NAME=OdooConnectorAPI
 
-# Run app.py when the container launches
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--reload"]
+# Run the API (production: no --reload, explicit port)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
