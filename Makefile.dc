@@ -1,0 +1,30 @@
+# DataCosmos OdooConnectorAPI — standardized make verbs (build/test/push/release).
+IMAGE    ?= ghcr.io/datacosmos-br/odooconnectorapi
+TAG      ?= 0.1.0-dc1
+REGISTRY ?= ghcr.io
+PORT     ?= 18000
+
+.PHONY: all build test push release login
+all: build test push release          ## build + test + push + release
+
+login:                                ## docker login to ghcr.io via gh token
+	gh auth token | docker login $(REGISTRY) -u $$(gh api user -q .login) --password-stdin
+
+build:                                ## build the image
+	docker build -t $(IMAGE):$(TAG) -t $(IMAGE):latest-dc1 -f Dockerfile .
+
+test:                                 ## run container + assert /openapi.json + /docs return 200
+	-docker rm -f oca-mk >/dev/null 2>&1
+	docker run -d --name oca-mk -p $(PORT):8000 $(IMAGE):$(TAG) >/dev/null
+	sleep 6
+	docker exec oca-mk python -c "import urllib.request as u; assert u.urlopen('http://127.0.0.1:8000/openapi.json').status==200; assert u.urlopen('http://127.0.0.1:8000/docs').status==200; print('API OK')"
+	docker rm -f oca-mk >/dev/null
+
+push: login                           ## push image to ghcr.io
+	docker push $(IMAGE):$(TAG)
+	docker push $(IMAGE):latest-dc1
+
+release:                              ## create the GitHub release
+	gh release create v$(TAG) --repo datacosmos-br/OdooConnectorAPI --target datacosmos \
+		--title "OdooConnectorAPI $(TAG) (DataCosmos)" \
+		--notes "DataCosmos OdooConnectorAPI image $(IMAGE):$(TAG)." || true
