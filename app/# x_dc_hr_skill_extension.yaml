@@ -1,0 +1,231 @@
+# x_dc_hr_skill_extension.yaml
+module:
+  name: "x_dc_hr_skill_extension"
+  version: "1.0"
+  description: "Datacosmos Custom HR Skill Extensions for Odoo"
+  author: "Datacosmos"
+  website: "https://datacosmos.com.br"
+  category: "Human Resources"
+  depends: ["hr"]
+  data_files:
+    - "views/hr_skill_level_views.xml"
+    - "views/hr_skill_views.xml"
+    - "views/hr_skill_type_views.xml"
+model_extensions:
+  - model: hr.skill.level
+    fields:
+      - name: x_dc_description
+        type: Text
+        translate: true
+        label:
+          en_US: "Description"
+          pt_BR: "Descrição"
+          es_ES: "Descripción"
+        help:
+          en_US: "Detailed description of the skill level, including expectations, responsibilities, and key competencies."
+          pt_BR: "Descrição detalhada do nível de habilidade, incluindo expectativas, responsabilidades e competências chave."
+          es_ES: "Descripción detallada del nivel de habilidad, incluyendo expectativas, responsabilidades y competencias clave."
+
+  - model: hr.skill
+    fields:
+      - name: x_dc_description
+        type: Text
+        translate: true
+        label:
+          en_US: "Description"
+          pt_BR: "Descrição"
+          es_ES: "Descripción"
+        help:
+          en_US: "Detailed description of the skill, outlining its importance and application."
+          pt_BR: "Descrição detalhada da habilidade, delineando sua importância e aplicação."
+          es_ES: "Descripción detallada de la habilidad, esbozando su importancia y aplicación."
+
+  - model: hr.skill.type
+    fields:
+      - name: x_dc_description
+        type: Text
+        translate: true
+        label:
+          en_US: "Description"
+          pt_BR: "Descrição"
+          es_ES: "Descripción"
+        help:
+          en_US: "Overview of the skill type, including typical roles and domains it applies to."
+          pt_BR: "Visão geral do tipo de habilidade, incluindo papéis típicos e domínios aos quais se aplica."
+          es_ES: "Resumen del tipo de habilidad, incluyendo roles típicos y dominios a los que se aplica."
+view_extensions:
+  - model: hr.skill.level
+    list_view:
+      - field: x_dc_description
+        position: after
+        reference_field: name
+        code: |
+          <field name="x_dc_description"/>
+    form_view:
+      - field: x_dc_description
+        position: after
+        reference_field: name
+        code: |
+          <field name="x_dc_description"/>
+  - model: hr.skill
+    list_view:
+      - field: x_dc_description
+        position: after
+        reference_field: name
+        code: |
+          <field name="x_dc_description"/>
+    form_view:
+      - field: x_dc_description
+        position: after
+        reference_field: name
+        code: |
+          <field name="x_dc_description"/>
+  - model: hr.skill.type
+    list_view:
+      - field: x_dc_description
+        position: after
+        reference_field: name
+        code: |
+          <field name="x_dc_description"/>
+    form_view:
+      - field: x_dc_description
+        position: after
+        reference_field: name
+        code: |
+          <field name="x_dc_description"/>
+data:
+  hr_skill_level:
+    languages:
+      - id: hr_skill_level_a1
+        name: A1
+        level_progress: 10
+        default_level: 1
+        skill_type_id: hr_skill_type_lang
+      - id: hr_skill_level_a2
+        name: A2
+        level_progress: 40
+        skill_type_id: hr_skill_type_lang
+      - id: hr_skill_level_b1
+        name: B1
+        level_progress: 60
+        skill_type_id: hr_skill_type_lang
+      - id: hr_skill_level_b2
+        name: B2
+        level_progress: 75
+        skill_type_id: hr_skill_type_lang
+      - id: hr_skill_level_c1
+        name: C1
+        level_progress: 85
+        skill_type_id: hr_skill_type_lang
+      - id: hr_skill_level_c2
+        name: C2
+        level_progress: 100
+        skill_type_id: hr_skill_type_lang
+  
+    programming:
+      - id: hr_skill_level_beginner
+        name: Beginner
+        default_level: 1
+        level_progress: 15
+        skill_type_id: hr_skill_type_dev
+      - id: hr_skill_level_elementary
+        name: Elementary
+        level_progress: 25
+        skill_type_id: hr_skill_type_dev
+      - id: hr_skill_level_intermediate
+        name: Intermediate
+        level_progress: 50
+        skill_type_id: hr_skill_type_dev
+      - id: hr_skill_level_advanced
+        name: Advanced
+        level_progress: 80
+        skill_type_id: hr_skill_type_dev
+      - id: hr_skill_level_expert
+        name: Expert
+        level_progress: 100
+        skill_type_id: hr_skill_type_dev
+  
+    marketing:
+      - id: hr_skill_level_ml1
+        name: L1
+        default_level: 1
+        level_progress: 25
+        skill_type_id: hr_skill_type_marketing
+      - id: hr_skill_level_ml2
+        name: L2
+        level_progress: 50
+        skill_type_id: hr_skill_type_marketing
+      - id: hr_skill_level_ml3
+        name: L3
+        level_progress: 75
+        skill_type_id: hr_skill_type_marketing
+      - id: hr_skill_level_ml4
+        name: L4
+        level_progress: 100
+        skill_type_id: hr_skill_type_marketing
+  
+    soft_skills:
+      - id: hr_skill_level_beginner_softskill
+        name: Beginner
+        default_level: 1
+        level_progress: 15
+        skill_type_id: hr_skill_type_softskill
+      - id: hr_skill_level_elementary_softskill
+        name: Elementary
+        level_progress: 25
+        skill_type_id: hr_skill_type_softskill
+      - id: hr_skill_level_intermediate_softskill
+        name: Intermediate
+        level_progress: 50
+        skill_type_id: hr_skill_type_softskill
+      - id: hr_skill_level_advanced_softskill
+        name: Advanced
+        level_progress: 80
+        skill_type_id: hr_skill_type_softskill
+      - id: hr_skill_level_expert_softskill
+        name: Expert
+        level_progress: 100
+        skill_type_id: hr_skill_type_softskill
+  
+    it:
+      - id: hr_skill_level_junior_it
+        name: Junior
+        default_level: 1
+        level_progress: 20
+        skill_type_id: hr_skill_type_it
+        x_dc_description: 
+          en_US: "Entry-level proficiency, focusing on learning and applying basic IT skills under supervision."
+      
+      - id: hr_skill_level_midlevel_it
+        name: Mid-Level
+        default_level: 2
+        level_progress: 40
+        skill_type_id: hr_skill_type_it
+        x_dc_description: 
+          en_US: "Developing proficiency, capable of performing tasks with some autonomy. Starts to specialize in certain IT areas."
+      
+      - id: hr_skill_level_senior_it
+        name: Senior
+        default_level: 3
+        level_progress: 60
+        skill_type_id: hr_skill_type_it
+        x_dc_description: 
+          en_US: "High proficiency and specialized knowledge in specific IT domains, capable of leading projects and mentoring juniors."
+      
+      - id: hr_skill_level_lead_it
+        name: Lead
+        default_level: 4
+        level_progress: 80
+        skill_type_id: 
+          en_US: hr_skill_type_it
+        x_dc_description: "Leadership role with deep technical expertise, responsible for strategic decision-making and leading multiple projects or teams."
+      
+      - id: hr_skill_level_expert_it
+        name: Expert
+        default_level: 5
+        level_progress: 100
+        skill_type_id: 
+          en_US: hr_skill_type_it
+        x_dc_description: "Top-level expertise, recognized authority in IT field, driving innovation, and setting standards for technologies and methodologies."
+
+  

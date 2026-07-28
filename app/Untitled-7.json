@@ -1,0 +1,141 @@
+{
+  "linkedin_internal_id": "11302416",
+  "description": "O Educa Mais Brasil trabalha h\u00e1 mais de 19 anos oferecendo bolsas de estudo para milhares de pessoas que desejam ter acesso \u00e0 Educa\u00e7\u00e3o de qualidade. O programa tem mais de 25 mil institui\u00e7\u00f5es parceiras, que disponibilizam at\u00e9 70% de desconto em bolsas de estudo para Escolas, Faculdades, P\u00f3s-Gradua\u00e7\u00e3o, Cursos T\u00e9cnicos, Idiomas, Profissionalizantes, Preparat\u00f3rios para Concursos, Pr\u00e9-Vestibular/Enem e EJA (Educa\u00e7\u00e3o para Jovens e Adultos). Mais de 900 mil alunos de todo o Brasil j\u00e1 foram beneficiados. Presente em todos os munic\u00edpios do pa\u00eds.",
+  "website": "https://www.educamaisbrasil.com.br",
+  "industry": "Information Technology & Services",
+  "company_size": [201, 500],
+  "company_size_on_linkedin": 507,
+  "hq": {
+    "country": "BR",
+    "city": "Salvador",
+    "postal_code": "41730-101",
+    "line_1": "Avenida Lu\u00eds Viana Filho",
+    "is_hq": true,
+    "state": "Bahia"
+  },
+  "company_type": "PRIVATELY_HELD",
+  "founded_year": 2003,
+  "specialities": [
+    "Bolsas de Estudo",
+    "Faculdades",
+    "Escolas",
+    "P\u00f3s-Gradua\u00e7\u00e3o",
+    "Cursos T\u00e9cnicos",
+    "Idiomas",
+    "Preparat\u00f3rio para Concursos",
+    "Cursos Profissionalizantes",
+    "EJA - Educa\u00e7\u00e3o para Jovens e Adultos",
+    "Pr\u00e9-Vestibular / ENEM",
+    "Guia Enem",
+    "Cursos Gratuitos"
+  ],
+  "locations": [
+    {
+      "country": "BR",
+      "city": "Salvador",
+      "postal_code": "41730-101",
+      "line_1": "Avenida Lu\u00eds Viana Filho",
+      "is_hq": true,
+      "state": "Bahia"
+    }
+  ],
+  "name": "Educa Mais Brasil",
+  "tagline": "Maior Programa de Bolsas de Estudo do Pa\u00eds.",
+  "universal_name_id": "educamaisbrasil",
+  "profile_pic_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/educamaisbrasil/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20240221%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20240221T044620Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d120821cfd5201ed14ccbb7fe51db4c74f81e3beab4c85831b49be2073441af7",
+  "background_cover_image_url": "https://s3.us-west-000.backblazeb2.com/proxycurl/company/educamaisbrasil/cover?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20240221%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20240221T044620Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d5fd1d77db787040c1c6cb89c244d2ea9ec515b401901c7fb081bb68eab6e24d",
+  "search_id": "11302416",
+  "similar_companies": [
+    {
+      "name": "Nubank",
+      "link": "https://br.linkedin.com/company/nubank",
+      "industry": "Financial Services",
+      "location": "S\u00e3o Paulo, S\u00e3o Paulo"
+    },
+    {
+      "name": "Somos Educa\u00e7\u00e3o",
+      "link": "https://br.linkedin.com/company/somoseducacao",
+      "industry": "Primary and Secondary Education",
+      "location": "S\u00e3o Paulo, S\u00e3o Paulo"
+    },
+    {
+      "name": "Vagas.com",
+      "link": "https://br.linkedin.com/company/vagascom",
+      "industry": "Internet Publishing",
+      "location": "S\u00e3o Paulo, SP"
+    },
+    {
+      "name": "Inter",
+      "link": "https://br.linkedin.com/company/bancointer",
+      "industry": "Financial Services",
+      "location": "Belo Horizonte, Minas Gerais"
+    },
+    {
+      "name": "Grupo Educar Mais",
+      "link": "https://br.linkedin.com/company/grupo-educar-mais-brasil",
+      "industry": "Education Administration Programs",
+      "location": null
+    },
+    {
+      "name": "Ita\u00fa Unibanco",
+      "link": "https://br.linkedin.com/company/itau",
+      "industry": "Banking",
+      "location": "S\u00e3o Paulo, S\u00e3o Paulo"
+    },
+    {
+      "name": "Quero Educa\u00e7\u00e3o",
+      "link": "https://br.linkedin.com/company/queroedu",
+      "industry": "IT Services and IT Consulting",
+      "location": "S\u00e3o Jos\u00e9 dos Campos, SP"
+    },
+    {
+      "name": "Ambev",
+      "link": "https://br.linkedin.com/company/ambev",
+      "industry": "Food and Beverage Services",
+      "location": "S\u00e3o Paulo, SP"
+    },
+    {
+      "name": "Magazine Luiza",
+      "link": "https://br.linkedin.com/company/magazine-luiza",
+      "industry": "Retail",
+      "location": "SAO PAULO, SP"
+    },
+    {
+      "name": "isaac",
+      "link": "https://br.linkedin.com/company/isaaceducacao",
+      "industry": "IT Services and IT Consulting",
+      "location": "S\u00e3o Paulo, S\u00e3o Paulo"
+    }
+  ],
+  "affiliated_companies": [],
+  "updates": [],
+  "follower_count": 44827,
+  "acquisitions": { "acquired": [], "acquired_by": null },
+  "exit_data": [],
+  "extra": {
+    "crunchbase_profile_url": "https://www.crunchbase.com/organization/educa-mais-brazil",
+    "ipo_status": "Private",
+    "crunchbase_rank": 1028884,
+    "founding_date": { "day": 1, "month": 1, "year": 2003 },
+    "operating_status": "Active",
+    "company_type": "For Profit",
+    "contact_email": null,
+    "phone_number": "+558007247202",
+    "facebook_id": "educamaisbrasil",
+    "twitter_id": "EducaMaisBrasil",
+    "number_of_funding_rounds": 0,
+    "total_funding_amount": null,
+    "stock_symbol": null,
+    "ipo_date": null,
+    "number_of_lead_investors": 0,
+    "number_of_investors": 0,
+    "total_fund_raised": 0,
+    "number_of_investments": null,
+    "number_of_lead_investments": 0,
+    "number_of_exits": null,
+    "number_of_acquisitions": null
+  },
+  "funding_data": [],
+  "categories": ["education", "training", "universities"],
+  "customer_list": null
+}

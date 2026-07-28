@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  odooconnectorapi:
+    build: ..
+    ports:
+      - "8000:8000"
+    environment:
+      ODOO_HOST: my.datacosmos.com.br
+      ODOO_PORT: 443
+      ODOO_DB: datacosmos
+      ODOO_USERNAME: marlon.costa@datacosmos.com.br
+      ODOO_PASSWORD: Coragem9#
+      ODOO_SSL: "true"
+
